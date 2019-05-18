@@ -92,20 +92,24 @@ if __name__ == '__main__':
     window.geometry('800x400')
     window.title("Рассчиташка")
 
-    lbl1 = Label(window, text="Количество витков: ")
+    lbl1 = Label(window, text="Количество витков (шт, целое): ")
     lbl1.grid(column=0, row=0)
     n = Entry(window, width=10)
     n.grid(column=1, row=0)
+    n.insert(INSERT, '1')
 
-    lbl2 = Label(window, text="Длина намотки: ")
+
+    lbl2 = Label(window, text="Длина намотки (мм, целое): ")
     lbl2.grid(column=0, row=1)
     l = Entry(window, width=10)
     l.grid(column=1, row=1)
+    l.insert(INSERT, '1')
 
-    lbl3 = Label(window, text="Диаметр проволоки: ")
+    lbl3 = Label(window, text="Диаметр проволоки (мм, ХХ.ХХ): ")
     lbl3.grid(column=0, row=2)
     d = Entry(window, width=10)
     d.grid(column=1, row=2)
+    d.insert(INSERT, '0.5')
 
 
     txt = scrolledtext.ScrolledText(window, width=40, height=10)
